@@ -1,0 +1,23 @@
+{
+    "MAX_EPISODE_LENGTH": 18000,
+    "NO_OP_STEPS": 10,
+    "MAX_EPISODES": 2000,
+    "AGENT_HISTORY_LENGTH": 4,
+    "UPDATE_FREQ": 4,
+    "NETW_UPDATE_FREQ": 10000,
+    "REPLAY_MEMORY_START_SIZE": 50000,
+    "DISCOUNT_FACTOR": 0.99,
+    "MEMORY_SIZE": 1000000,
+    "BS": 32,
+    "LEARNING_RATE": 0.0001,
+    "PUNISH": 0.0,
+    "INI_EPSILON": 1.0,
+    "END_EPSILON": 0.1,
+    "MIN_OBSERVE_EPISODE": 200,
+    "GAME_ENV": "BreakoutDeterministic-v4",
+    "REWARD_EXTRAPOLATION_EXPONENT": 0.95,
+    "LINEAR_EXPLORATION_EXPONENT": false,
+    "USE_DOUBLE_MODEL": true,
+    "frame_height": 84,
+    "frame_width": 84
+}
