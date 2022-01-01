@@ -204,8 +204,11 @@ class ReplayMemory:
             if self.use_estimated_reward:
                 # self.minibatch_rewards[i] = self.backfilled_reward[idx] * \
                 #                             np.power(self.backfill_factor[idx], self.reward_extrapolation_exponent)
-                self.minibatch_rewards[i] = self.backfilled_reward[idx] * \
-                                            np.power(self.reward_extrapolation_exponent, self.backfill_factor[idx])
+                if idx < 25:
+                    self.minibatch_rewards[i] = self.backfilled_reward[idx] * \
+                                                np.power(self.reward_extrapolation_exponent, self.backfill_factor[idx])
+                else:
+                    self.minibatch_rewards[i] = 0.0
 
             else:
                 self.minibatch_rewards[i] = self.rewards[idx]
